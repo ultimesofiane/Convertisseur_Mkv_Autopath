@@ -22,7 +22,7 @@ if ((Get-Item -LiteralPath $FilePath).PSIsContainer) {
 # -----------------------------
 # Variables
 $animeRoot = "S:\ANIME"
-$ffmpegPath = "C:\Users\Ulso\Documents\Convertisseur\ffmpeg_full_build\bin\ffmpeg.exe"
+$ffmpegPath = "C:\Users\%USERNAME%\Documents\Convertisseur\ffmpeg_full_build\bin\ffmpeg.exe"
 $fileName = [System.IO.Path]::GetFileNameWithoutExtension($FilePath)
 $fileExt = [System.IO.Path]::GetExtension($FilePath)
 
@@ -76,3 +76,4 @@ if (Test-Path -LiteralPath $outputFile) {
 } else {
     Write-Output "Erreur lors de la conversion"
 }
+
